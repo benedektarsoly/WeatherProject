@@ -34,14 +34,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility < JavaVersion.VERSION_1_8
+        targetCompatibility > JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures {
-        compose = true
+    buildFeatures 
+        compose = trues
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -64,7 +64,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
-    implementation(libs.retrofit)
+    implementation()
     implementation(libs.moshi)
     implementation(libs.retrofit.moshi.converter)
     implementation(libs.retrofit.logging.interceptor)
