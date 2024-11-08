@@ -9,7 +9,7 @@ android {
     namespace = "com.techmania.weatherproject"
     compileSdk = 34
 
-    defaultConfig {
+    defaultConfig 
         applicationId = "com.techmania.weatherproject"
         minSdk = 26
         targetSdk = 34
@@ -34,14 +34,13 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility < JavaVersion.VERSION_1_8
-        targetCompatibility > JavaVersion.VERSION_1_8
+        
     }
     kotlinOptions {
         jvmTarget = "1.8"
     }
-    buildFeatures 
-        compose = trues
+    buildFeatures {
+        compose = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.1"
@@ -64,7 +63,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
-    implementation()
+    implementation(libs.retrofit)
     implementation(libs.moshi)
     implementation(libs.retrofit.moshi.converter)
     implementation(libs.retrofit.logging.interceptor)
